@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Path Planner</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="icon" href="icon">
+    <title>3748 Path Planning Utility</title>
 </head>
-<body style="background-color: #18191b;">
-    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin: .5em;">
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-outline-primary">Add Point</button>
-          <button type="button" class="btn btn-outline-primary">Move Point</button>
-          <button type="button" class="btn btn-outline-danger">Delete Point</button>
-        </div>
-      </div>
+<body style="background-color: #12131f;">
+    <div class="top-bar">
+        <span class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin: .5em;">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-dark" id="btnPickOrigin">Set Origin</button>
+              <button type="button" class="btn btn-dark" id="btnResteOrigin">Reset Origin</button>
+            </div>
+        </span>
+        <span class="input-group" id="mousePosIndicator" style="width: 15em; user-select: none;">
+            <span class="input-group-text bg-dark text-light">X</span>
+            <input class="form-control bg-dark text-light" type="text" value="0" aria-label="Disabled input example" id="mousePositionIndicatorX" disabled readonly>
+            <span class="input-group-text bg-dark text-light">Y</span>
+            <input class="form-control bg-dark text-light" type="text" value="0" aria-label="Disabled input example" id="mousePositionIndicatorY" disabled readonly>
+        </span>
+    </div>
 
     <div id="mainCanvasContainer" style="width: 100%;">
         <image src="2023LayoutMarkingDiagramCropped.png" id="bgImage" style="display: none;"></image>
@@ -23,6 +32,6 @@
 
     <script type="text/javascript" src="/eel.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
